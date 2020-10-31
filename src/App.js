@@ -1,34 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FilmsList from './components/FilmsList/FilmsList';
-import './App.css';
-import FilmsSearcher from './components/FilmsSearcher/FilmSearcher';
+import styles from './App.module.css';
+import FilmsSearcher from './components/FilmsSearcher/FilmsSearcher';
 
-const films = [
-    {
-        id: 1,
-        title: 'Joker',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis quam reprehenderit esse voluptates hic sit beatae odio dolore laudantium?'
-    },
-    {
-        id: 2,
-        title: 'Tenet',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis quam reprehenderit esse voluptates hic sit beatae odio dolore laudantium?'
-    },
-    {
-        id: 3,
-        title: 'Iron Man',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis quam reprehenderit esse voluptates hic sit beatae odio dolore laudantium?'
+const App = ({ initialFilms }) => {
+    const [films, setFilms] = useState(initialFilms);
+
+    const handleSearch = (searchQuery) => {
+        let displayedFilms = initialFilms.filter((film) => {
+            let searchValue = film.title.toLowerCase();
+            return searchValue.indexOf(searchQuery) !== -1;
+        });
+        setFilms(displayedFilms);
+    };
+
+    const moveToFavourites = (id) => {
+        const oldIndex = films.findIndex(film => film.id === id);
+        const copy = [...films];
+
+        if (oldIndex !== 0) {
+            copy.unshift(copy.splice(oldIndex, 1)[0]);
+        } else {
+            copy.push(copy.splice(oldIndex, 1)[0]);
+        }
+
+        setFilms(copy);
     }
-];
 
-
-
-const App = () => {
     return (
         <div className="App">
-            <div className="container">
-                <FilmsSearcher />
-                <FilmsList />
+            <div className={styles.container}>
+                <FilmsSearcher searchFilms={handleSearch} />
+                <FilmsList films={films} moveToFavourites={moveToFavourites} />
             </div>
         </div>
     );
