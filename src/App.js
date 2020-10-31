@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import FilmsList from './components/FilmsList/FilmsList';
 import './App.css';
+import FilmsSearcher from './components/FilmsSearcher/FilmSearcher';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const films = [
+    {
+        id: 1,
+        title: 'Joker',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis quam reprehenderit esse voluptates hic sit beatae odio dolore laudantium?'
+    },
+    {
+        id: 2,
+        title: 'Tenet',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis quam reprehenderit esse voluptates hic sit beatae odio dolore laudantium?'
+    },
+    {
+        id: 3,
+        title: 'Iron Man',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis quam reprehenderit esse voluptates hic sit beatae odio dolore laudantium?'
+    }
+];
+
+
+
+const App = () => {
+    return (
+        <div className="App">
+            <div className="container">
+                <FilmsSearcher />
+                <FilmsList />
+            </div>
+        </div>
+    );
 }
 
 export default App;
