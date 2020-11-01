@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/darkness8129/test-task-films-searcher/static/css/main.f5a1f1b0.chunk.css",
-    "main.js": "/darkness8129/test-task-films-searcher/static/js/main.4be4335a.chunk.js",
-    "main.js.map": "/darkness8129/test-task-films-searcher/static/js/main.4be4335a.chunk.js.map",
+    "main.js": "/darkness8129/test-task-films-searcher/static/js/main.185570d7.chunk.js",
+    "main.js.map": "/darkness8129/test-task-films-searcher/static/js/main.185570d7.chunk.js.map",
     "runtime-main.js": "/darkness8129/test-task-films-searcher/static/js/runtime-main.52220fc0.js",
     "runtime-main.js.map": "/darkness8129/test-task-films-searcher/static/js/runtime-main.52220fc0.js.map",
     "static/js/2.56fd0c7b.chunk.js": "/darkness8129/test-task-films-searcher/static/js/2.56fd0c7b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.52220fc0.js",
     "static/js/2.56fd0c7b.chunk.js",
     "static/css/main.f5a1f1b0.chunk.css",
-    "static/js/main.4be4335a.chunk.js"
+    "static/js/main.185570d7.chunk.js"
   ]
 }
