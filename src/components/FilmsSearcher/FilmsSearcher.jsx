@@ -12,11 +12,17 @@ const FilmsSearcher = ({ searchFilms }) => {
     return (
         <div className={styles.filmsSearcher}>
             <input
+                className={styles.searchField}
                 type='text'
                 placeholder='Search for a movie...'
                 onChange={handleChange}
             />
-            <button onClick={() => searchFilms(searchQuery)}>Search</button>
+            <button
+                className={styles.searchBtn}
+                onClick={() => searchFilms(searchQuery)}
+            >
+                Search
+            </button>
         </div>
     );
 };

@@ -2,3 +2,14 @@
     display: flex;
     justify-content: center;
 }
+
+.searchField {
+    padding: 10px 5px;
+    margin: 10px;
+}
+
+.searchBtn {
+    margin: 10px;
+    padding: 10px 30px;
+    background-color: burlywood;
+}
